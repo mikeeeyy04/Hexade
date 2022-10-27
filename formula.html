@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formula.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Hexade</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="images/logo_light.png" width="100%">
+        </a>
+        <ul class="ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="#formula">Formula</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Price</a></li>
+        </ul>
+        <button class="start">
+            <a href="#services">Get Started</a>
+        </button>
+
+
+        <div class="btn-group">
+            <button class="nav-menu-btn">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav">
+            <button class="nav-close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="wrapper">
+
+            <ul>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#services" class="nav-link">Services</a>
+                    <a href="#formula" class="nav-link">Formula</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#works" class="nav-link">Works</a>
+                    <a href="#price" class="nav-link">Price</a>
+                </li>
+            </ul>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class="glows"></div>
+    <img class="watermark" id="watermark" src="images/icon.png" width="10%">
+    <img class="watermark2" id="watermark2" src="images/icon.png" width="10%">
+    <section id="formula">
+
+        <section class="formula f2"> 
+            <div>
+            <h1 class="reveal2 f-title">Procedures</h1>
+            <h4 class="reveal2 f-subtitle">Formula on Making a Fantastic Product</h4>
+            <p>Scroll down to view :)</p>
+        </div>
+        </section>
+
+        <section class="formula"> 
+        <div>
+            <h2 class="reveal2">Best Team</h2>
+            <h2 class="reveal2 p">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <img src="images/team.svg">
+        </div>
+        </section>
+
+        <section class="formula">
+        <div>
+            <h2 class="reveal2">High Quality</h2>
+            <h2 class="reveal2 p">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <img src="images/quality.svg">
+        </div>
+        </section>
+
+        <section class="formula">
+        <div>
+            <h2 class="reveal2">Creativity</h2>
+            <h2 class="reveal2 p">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <img src="images/creative.svg">
+        </div>
+        </section>
+
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+        <script type="text/javascript">
+            const reveal = gsap.utils.toArray('.reveal2');
+            reveal.forEach((text, i) => {
+                ScrollTrigger.create({
+                    trigger: text,
+                    toggleClass: 'active',
+                    start: "top 85%",
+                    end: "top 0%",
+              })
+            })
+
+            const images = gsap.utils.toArray('img');
+            images.forEach((img, i) => {
+                ScrollTrigger.create({
+                    trigger: img,
+                    toggleClass: 'active',
+                    start: "top 85%",
+                    end: "top 0%",
+              })
+            })
+        </script>
+
+    </section>
